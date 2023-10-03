@@ -4,9 +4,10 @@ public abstract class DocTributario {
     private String rut;
     private Date fecha;
     private Direccion Direccion;
-    public DocTributario(String numero, String rut, Date fecha) {
+    private OrdenCompra ordenCompra;
+    public DocTributario(String numero) {
         this.numero = numero;
-        this.rut = rut;
-        this.fecha = fecha;
+        this.rut = ordenCompra.getCliente().getRut();
+        this.fecha = ordenCompra.getFecha();
     }
 }

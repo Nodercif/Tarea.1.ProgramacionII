@@ -3,9 +3,10 @@ import java.util.ArrayList;
 public class OrdenCompra {
     private Date fecha;
     private String estado;
-    private Articulo articulo;
     private ArrayList<DetalleOrden> detalleOrden;
     private Cliente cliente;
+    private DocTributario docTributario;
+    private ArrayList<Pago> pago;
     public OrdenCompra(Date fecha, String estado){
         this.fecha = fecha;
         this.estado = estado;
@@ -37,5 +38,13 @@ public class OrdenCompra {
             peso += detalleOrden.get(i).calcPeso();
         }
         return peso;
+    }
+
+    public Date getFecha(){
+        return fecha;
+    }
+
+    public Cliente getCliente(){
+        return this.cliente;
     }
 }
