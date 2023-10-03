@@ -5,6 +5,7 @@ public class OrdenCompra {
     private String estado;
     private Articulo articulo;
     private ArrayList<DetalleOrden> detalleOrden;
+    private Cliente cliente;
     public OrdenCompra(Date fecha, String estado){
         this.fecha = fecha;
         this.estado = estado;
