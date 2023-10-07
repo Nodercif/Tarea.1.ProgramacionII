@@ -18,6 +18,7 @@ public class MainTarea {
         Cliente cliente1 = new Cliente("Gabriela.", "11111111-1", direccion1);
         Cliente cliente2 = new Cliente("Gabriela2", "2222222-2", direccion2);
 
-        ordenCompra1.
+        //No alcancé
+        
     }
 }
