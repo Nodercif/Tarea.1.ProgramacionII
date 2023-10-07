@@ -11,6 +11,24 @@ public class OrdenCompra {
         this.fecha = fecha;
         this.estado = estado;
     }
+
+    public DocTributario getDocumento() {
+        return this.docTributario;
+    }
+
+    public void setDocumento(DocTributario documento) {
+        this.docTributario = documento;
+    }
+
+    public void addPago(Pago pago) {
+        this.pago.add(pago);
+    }
+
+    public Pago getPago(int indice) {
+        if (indice < 0 || indice > this.pago.size() - 1) return null;
+        return this.pago.get(indice);
+    }
+    
     public int calcPrecioSinIVA(){
         int precioSinIVA = 0;
         for(int i = 0; i < detalleOrden.size(); i++){
@@ -57,11 +75,11 @@ public class OrdenCompra {
     }
 
     public String toString() {
-        String string = new String();
-        string += "OrdenCompra: \n";
-        string += "  Estado: " + this.estado + "\n";
-        string += "  Precio: " + this.calcPrecio() + "\n";
-        string += "  Peso:   " + this.calcPeso() + "\n";
-        return string;
+        String s = new String();
+        s += "OrdenCompra: \n";
+        s += "  Estado: " + this.estado + ".\n";
+        s += "  Precio: $" + this.calcPrecio() + ".\n";
+        s += "  Peso:   " + this.calcPeso() + "Kg.\n";
+        return s;
     }
 }

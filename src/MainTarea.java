@@ -13,8 +13,11 @@ public class MainTarea {
         Articulo articulo4 = new Articulo(1.8f, "Naranja.", "Fruta naranja con sabor dulce y acido.", 3990);
         Articulo articulo5 = new Articulo(1f, "Frutilla.", "Fruta roja con sabor dulce.", 5990);
 
-        
+        Direccion direccion1 = new Direccion("Mi casa.");
+        Direccion direccion2 = new Direccion("Tu casa.");
+        Cliente cliente1 = new Cliente("Gabriela.", "11111111-1", direccion1);
+        Cliente cliente2 = new Cliente("Gabriela2", "2222222-2", direccion2);
 
-
+        ordenCompra1.
     }
 }
