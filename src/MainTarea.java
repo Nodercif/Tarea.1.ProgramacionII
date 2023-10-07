@@ -37,6 +37,24 @@ public class MainTarea {
         ordenCompra3.addDetalleOrden(9, articulo4);
         ordenCompra3.addDetalleOrden(2, articulo5);
 
+        Boleta boleta1 = new Boleta("123456789");
+        ordenCompra1.setDocumento(boleta1);
+
+        Factura factura2 = new Factura("123456789");
+        ordenCompra2.setDocumento(factura2);
+
+        Boleta boleta3 = new Boleta("123456789");
+        ordenCompra3.setDocumento(boleta3);
+
+        Transferencia transferencia1 = new Transferencia(ordenCompra1.calcPrecio(), fecha, "BancoEstado.", "123456789.");
+        ordenCompra1.addPago(transferencia1);
+
+        Efectivo efectivo2 = new Efectivo(ordenCompra2.calcPrecio(), fecha);
+        ordenCompra2.addPago(efectivo2);
+
+        Tarjeta tarjeta3 = new Tarjeta(ordenCompra3.calcPrecio(), fecha, "Credito.", "123456789.");
+        ordenCompra3.addPago(tarjeta3);
+
 
 
 

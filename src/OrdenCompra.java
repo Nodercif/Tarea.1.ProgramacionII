@@ -16,6 +16,30 @@ public class OrdenCompra {
         this.detalleOrden = new ArrayList<>();
     }
 
+    public Date getFecha() {
+        return this.fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getEstado() {
+        return this.estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public Cliente getCliente() {
+        return this.cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
     public DocTributario getDocumento() {
         return this.docTributario;
     }
@@ -64,22 +88,6 @@ public class OrdenCompra {
             peso += detalleOrden.get(i).calcPeso();
         }
         return peso;
-    }
-
-    public Date getFecha(){
-        return fecha;
-    }
-
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
-    }
-
-    public Cliente getCliente(){
-        return this.cliente;
-    }
-
-    public void setCliente(Cliente cliente){
-        this.cliente = cliente;
     }
 
     public String toString() {
