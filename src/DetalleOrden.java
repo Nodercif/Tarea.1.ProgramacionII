@@ -2,10 +2,9 @@ public class DetalleOrden {
     private int cantidad;
     private Articulo articulo;
     private OrdenCompra ordenCompra;
-    public DetalleOrden(int cantidad, Articulo articulo, OrdenCompra ordenCompra){
+    public DetalleOrden(int cantidad, Articulo articulo){
         this.cantidad = cantidad;
         this.articulo = articulo;
-        this.ordenCompra = ordenCompra;
     }
     public float calcPrecio(){
         float precio = (cantidad * articulo.getPrecio());

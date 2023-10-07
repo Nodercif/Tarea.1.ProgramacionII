@@ -7,9 +7,13 @@ public class OrdenCompra {
     private Cliente cliente;
     private DocTributario docTributario;
     private ArrayList<Pago> pago;
-    public OrdenCompra(Date fecha, String estado){
+    public OrdenCompra(Date fecha, String estado, Cliente cliente){
         this.fecha = fecha;
         this.estado = estado;
+        this.cliente = cliente;
+        this.docTributario = null;
+        this.pago = new ArrayList<>();
+        this.detalleOrden = new ArrayList<>();
     }
 
     public DocTributario getDocumento() {
@@ -22,6 +26,15 @@ public class OrdenCompra {
 
     public void addPago(Pago pago) {
         this.pago.add(pago);
+    }
+
+    public Pago getPago(int indice) {
+        if (indice < 0 || indice > this.pago.size() - 1) return null;
+        return this.pago.get(indice);
+    }
+
+    public void addDetalleOrden(int cantidad, Articulo articulo) {
+        this.detalleOrden.add(new DetalleOrden(cantidad, articulo));
     }
 
     public int calcPrecioSinIVA(){
