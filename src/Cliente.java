@@ -13,4 +13,15 @@ public class Cliente {
         return this.rut;
     }
 
+    public void setRut(String rut){
+        this.rut = rut;
+    }
+
+    public String toString(){
+        String s = new String();
+        s = "Nombre: " + this.nombre + ".\n";
+        s += "Rut: " + this.rut + ".\n";
+        s += "Direccion: " +this.direccion.getDireccion() + ".\n";
+        return s;
+    }
 }

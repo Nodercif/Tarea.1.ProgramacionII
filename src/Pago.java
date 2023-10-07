@@ -3,7 +3,8 @@ public abstract class Pago {
     private float monto;
     private Date fecha;
     private OrdenCompra ordenCompra;
-    public Pago(float monto, Date fecha){
+    public Pago(float monto, Date fecha, OrdenCompra ordenCompra){
+        this.ordenCompra = ordenCompra;
         this.monto = monto;
         this.fecha = ordenCompra.getFecha();
     }

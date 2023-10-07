@@ -3,9 +3,9 @@ public class MainTarea {
     public static void main(String[] args) {
         Date fecha = new Date(2023, 10, 04);
 
-        Direccion direccion1 = new Direccion("Mi casa.");
-        Direccion direccion2 = new Direccion("Tu casa.");
-        Cliente cliente1 = new Cliente("Gabriela.", "11111111-1", direccion1);
+        Direccion direccion1 = new Direccion("Mi casa");
+        Direccion direccion2 = new Direccion("Tu casa");
+        Cliente cliente1 = new Cliente("Gabriela", "11111111-1", direccion1);
         Cliente cliente2 = new Cliente("Gabriela2", "2222222-2", direccion2);
 
         OrdenCompra ordenCompra1 = new OrdenCompra(fecha, "vacio", cliente1);
@@ -20,10 +20,10 @@ public class MainTarea {
         Articulo articulo5 = new Articulo(1f, "Frutilla.", "Fruta roja con sabor dulce.", 5990);
 
         ordenCompra1.addDetalleOrden(4, articulo1);
-        ordenCompra1.addDetalleOrden(3, articulo2);
-        ordenCompra1.addDetalleOrden(8, articulo3);
-        ordenCompra1.addDetalleOrden(9, articulo4);
-        ordenCompra1.addDetalleOrden(2, articulo5);
+        ordenCompra1.addDetalleOrden(2, articulo2);
+        ordenCompra1.addDetalleOrden(3, articulo3);
+        ordenCompra1.addDetalleOrden(3, articulo4);
+        ordenCompra1.addDetalleOrden(5, articulo5);
 
         ordenCompra2.addDetalleOrden(4, articulo1);
         ordenCompra2.addDetalleOrden(3, articulo2);
@@ -31,36 +31,37 @@ public class MainTarea {
         ordenCompra2.addDetalleOrden(9, articulo4);
         ordenCompra2.addDetalleOrden(2, articulo5);
 
-        ordenCompra3.addDetalleOrden(4, articulo1);
-        ordenCompra3.addDetalleOrden(3, articulo2);
-        ordenCompra3.addDetalleOrden(8, articulo3);
-        ordenCompra3.addDetalleOrden(9, articulo4);
-        ordenCompra3.addDetalleOrden(2, articulo5);
+        ordenCompra3.addDetalleOrden(6, articulo1);
+        ordenCompra3.addDetalleOrden(7, articulo2);
+        ordenCompra3.addDetalleOrden(3, articulo3);
+        ordenCompra3.addDetalleOrden(1, articulo4);
+        ordenCompra3.addDetalleOrden(8, articulo5);
 
-        Boleta boleta1 = new Boleta("123456789");
+        Boleta boleta1 = new Boleta("123456789", ordenCompra1);
         ordenCompra1.setDocumento(boleta1);
 
-        Factura factura2 = new Factura("123456789");
+        Factura factura2 = new Factura("123456789", ordenCompra2);
         ordenCompra2.setDocumento(factura2);
 
-        Boleta boleta3 = new Boleta("123456789");
+        Boleta boleta3 = new Boleta("123456789", ordenCompra3);
         ordenCompra3.setDocumento(boleta3);
 
-        Transferencia transferencia1 = new Transferencia(ordenCompra1.calcPrecio(), fecha, "BancoEstado.", "123456789.");
+        Transferencia transferencia1 = new Transferencia(ordenCompra1.calcPrecio(), fecha, "BancoEstado.", "123456789.", ordenCompra1);
         ordenCompra1.addPago(transferencia1);
 
-        Efectivo efectivo2 = new Efectivo(ordenCompra2.calcPrecio(), fecha);
+        Efectivo efectivo2 = new Efectivo(ordenCompra2.calcPrecio(), fecha, ordenCompra2);
         ordenCompra2.addPago(efectivo2);
 
-        Tarjeta tarjeta3 = new Tarjeta(ordenCompra3.calcPrecio(), fecha, "Credito.", "123456789.");
+        Tarjeta tarjeta3 = new Tarjeta(ordenCompra3.calcPrecio(), fecha, "Credito.", "123456789.", ordenCompra3);
         ordenCompra3.addPago(tarjeta3);
 
+        //Strings
+        System.out.println("Cliente 1:\n" + cliente1.toString());
+        System.out.println("Orden de compra 1:\n" + ordenCompra1.toString());
+        System.out.println("Orden de compra 2:\n" + ordenCompra2.toString());
 
-
-
-
-
-        //No alcancé
+        System.out.println("Cliente 2:\n" + cliente2.toString());
+        System.out.println("Orden de compra 1:\n" + ordenCompra3.toString());
 
     }
 }

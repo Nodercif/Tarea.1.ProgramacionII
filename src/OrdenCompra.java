@@ -92,8 +92,7 @@ public class OrdenCompra {
 
     public String toString() {
         String s = new String();
-        s += "OrdenCompra: \n";
-        s += "  Estado: " + this.estado + ".\n";
+        s = "  Estado: " + this.estado + ".\n";
         s += "  Precio: $" + this.calcPrecio() + ".\n";
         s += "  Peso:   " + this.calcPeso() + "Kg.\n";
         return s;
