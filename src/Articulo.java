@@ -9,11 +9,45 @@ public class Articulo {
         this.descripcion = descripcion;
         this.precio = precio;
     }
-    public float getPrecio() {
-        return precio;
-    }
 
     public float getPeso() {
-        return peso;
+        return this.peso;
+    }
+
+    public void setPeso(float peso) {
+        this.peso = peso;
+    }
+
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDescripcion() {
+        return this.descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public float getPrecio() {
+        return this.precio;
+    }
+
+    public void setPrecio(float precio) {
+        this.precio = precio;
+    }
+
+    public String toString() {
+        String s = new String();
+        s = "Articulo: " + this.nombre + "\n";
+        s += "Descripcion del articulo: " + this.descripcion + "\n";
+        s += " Peso: " + this.peso + "\n";
+        s += " Precio: " + this.precio + "\n";
+        return s;
     }
 }

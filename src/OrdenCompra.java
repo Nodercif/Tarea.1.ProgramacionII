@@ -44,7 +44,24 @@ public class OrdenCompra {
         return fecha;
     }
 
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
     public Cliente getCliente(){
         return this.cliente;
+    }
+
+    public void setCliente(Cliente cliente){
+        this.cliente = cliente;
+    }
+
+    public String toString() {
+        String string = new String();
+        string += "OrdenCompra: \n";
+        string += "  Estado: " + this.estado + "\n";
+        string += "  Precio: " + this.calcPrecio() + "\n";
+        string += "  Peso:   " + this.calcPeso() + "\n";
+        return string;
     }
 }
