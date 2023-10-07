@@ -24,11 +24,6 @@ public class OrdenCompra {
         this.pago.add(pago);
     }
 
-    public Pago getPago(int indice) {
-        if (indice < 0 || indice > this.pago.size() - 1) return null;
-        return this.pago.get(indice);
-    }
-    
     public int calcPrecioSinIVA(){
         int precioSinIVA = 0;
         for(int i = 0; i < detalleOrden.size(); i++){
