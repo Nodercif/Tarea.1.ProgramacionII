@@ -8,5 +8,4 @@ public class Efectivo extends Pago {
         float devolucion = super.getMonto()-super.getOrdenCompra();
         return devolucion;
     }
-
 }

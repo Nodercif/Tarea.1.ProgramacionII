@@ -7,4 +7,11 @@ public class Tarjeta extends Pago {
        this.tipo = tipo;
        this.numTransaccion = numTransaccion;
     }
+
+    public String toString(){
+        String s = new String();
+        s = "Tarjeta: " + this.tipo + ".\n";
+        s += "Numero de transaccion: " + this.numTransaccion + ".\n";
+        return s;
+    }
 }

@@ -7,4 +7,11 @@ public class Transferencia extends Pago {
         this.banco = banco;
         this.numCuenta = numCuenta;
     }
+
+    public String toString(){
+        String s = new String();
+        s = "Banco: " + this.banco + ".\n";
+        s += "Numero de cuenta: " + this.numCuenta + ".\n";
+        return s;
+    }
 }
