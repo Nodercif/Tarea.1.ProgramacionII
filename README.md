@@ -1,2 +1,1 @@
-# Tarea.1.ProgramacionII
-Gabriela Muñoz Castillo
+# Tarea1.ProgramacionII
